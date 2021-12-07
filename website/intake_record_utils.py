@@ -5,11 +5,11 @@ from datetime import datetime
 
 def record_intake(user_id,food_name,calorie,carb,fat,protein,sodium):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="aws_host.amazonaws.com", # changed due to privacy
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="dfc", # changed due to privacy
+	    user="zughr", # changed due to privacy
+	    password="97e2ddc3b" # changed due to privacy
 	)
 
 	cursor=conn.cursor()
