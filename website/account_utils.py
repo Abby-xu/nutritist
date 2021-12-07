@@ -44,11 +44,11 @@ def allfalsemap():
 	return falsemap;
 def register(first_name,last_name,email,password):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="aws_hpst.compute-1.amazonaws.com", # changed due to privacy
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d6fc",
+	    user="zuhr", # changed due to privacy
+	    password="97e2dd88ac3b" # changed due to privacy
 	)
 
 	cursor=conn.cursor()
