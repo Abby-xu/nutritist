@@ -1,4 +1,0 @@
-Flask
-gunicorn
-Flask-SQLAlchemy
-flask-login

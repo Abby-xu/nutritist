@@ -20,11 +20,11 @@ def get_user_id():
 def get_user_information(user_id):
     user_health = []
     conn = psycopg2.connect(
-        host="aws_host.amazonaws.com", # changed due to privacy
+        host="ec2-52-86-123-180.compute-1.amazonaws.com",
         port="5432",
-        database="bpkkb06fc", # changed due to privacy
-        user="zunhwbfmr", # changed due to privacy
-        password="97e2dd8a68587ef47ab6da81c8ac3b" # changed due to privacy
+        database="d2o2cbpkkb06fc",
+        user="zunhwbfmndzghr",
+        password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
     )
     response={}
     keys=["email","alcohol_cocktail","alcohol_free","celery_free","crustacean_free","dairy_free","dash","egg_free","fish_free","fodmap_free","gluten_free","immuno_supportive","keto_friendly","kidney_friendly","kosher","low_potassium","low_sugar","lupine_free","mediterranean","mollusk_free","mustard_free","no_oil_added","paleo","peanut_free","pecatarian","pork_free","red_meat_free","sesame_free","shellfish_free","soy_free","sugar_conscious","sulfite_free","tree_nut_free","vegan","vegetarian","wheat_free"]
