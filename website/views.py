@@ -123,11 +123,11 @@ def recomendation_testing():
 
 @views.route("/nutrition/recipe_Search",methods=['POST'])
 def search_recipe():
-    return {"response":recipe_search.recipe_search(request.json["q"],request.json["b"],get_user_information(current_user.id),request.json["a"])}
+    return {"response":recipe_search.recipe_search(request.json["q"],request.json["b"],[],request.json["a"])} #get_user_information(current_user.id),request.json["a"])}
 
 @views.route('/nutrition/random_recipes',methods=['POST'])
 def random_recipes():
-    x = recipe_search.random_recipes([],get_user_information(current_user.id),[])
+    x = recipe_search.random_recipes([],[],[])#get_user_information(current_user.id),[])
     return {"response":x}
 
 @views.route("/nutrition/get_auto_complete",methods=['POST'])

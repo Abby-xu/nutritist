@@ -5,11 +5,11 @@ from datetime import datetime
 
 def record_intake(user_id,food_name,calorie,carb,fat,protein,sodium):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 
 	cursor=conn.cursor()
@@ -29,11 +29,11 @@ def get_past_intake_days(user_id,day=1,end_date=''):
 	response={}
 	keys=["intake_date", "food_name", "calorie", "carb", "fat", "protein", "sodium"]
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 
 	cursor=conn.cursor()
@@ -73,11 +73,11 @@ def get_past_intake(user_id,day=7,end_date=''):
 	response={}
 	keys=["intake_date", "food_name", "calorie", "carb", "fat", "protein", "sodium"]
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 
 	cursor=conn.cursor()

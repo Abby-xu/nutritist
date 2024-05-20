@@ -44,19 +44,19 @@ def allfalsemap():
 	return falsemap;
 def register(first_name,last_name,email,password):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 
 	cursor=conn.cursor()
-	cursor.execute("select count (*) from Users where email like '{}'".format(email))
+	# cursor.execute("select count (*) from Users where email like '{}'".format(email))
 	
-	if(cursor.fetchone()[0] !=0):
-		cursor.close()
-		return {"result":"failed","errormsg":"user email already exists"}
+	# if(cursor.fetchone()[0] !=0):
+	# 	cursor.close()
+	# 	return {"result":"failed","errormsg":"user email already exists"}
 	
 	cursor.execute("INSERT INTO Users (firstName, lastName, email, password) values ('{}','{}','{}','{}');".format(first_name,last_name,email,password))
 
@@ -71,11 +71,11 @@ def update_settings(
 	option_params
 	):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 
 	cursor=conn.cursor()
@@ -100,11 +100,11 @@ def update_settings(
 
 def get_settings(email):
 	conn = psycopg2.connect(
-	    host="ec2-52-86-123-180.compute-1.amazonaws.com",
+	    host="ec2-54-211-177-159.compute-1.amazonaws.com",
 	    port="5432",
-	    database="d2o2cbpkkb06fc",
-	    user="zunhwbfmndzghr",
-	    password="97e2dd8a68587ef47ecc4ced5b9137bf7ab6daadada6757c028cf96b81c8ac3b"
+	    database="d37cnqb90qqaeb",
+	    user="bqucvxsqkrxwzh",
+	    password="ee7fcdf7a6f6878a2a0c0873a84ac34f9816c92b5d036a1d570e5ee4bdd3ba98"
 	)
 	cursor=conn.cursor()
 	cursor.execute("select count (*) from Users where email like '{}'".format(email))
